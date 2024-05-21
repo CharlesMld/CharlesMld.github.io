@@ -1,3 +1,6 @@
+# General stuff about github pages
+
+[GitHub pages doc](https://docs.github.com/en/pages)
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
@@ -50,9 +53,6 @@ Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#d
 The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
 If you have problems using it, or would like to participate in improving it, please go to the main repository for feedback!
 
-## License
-
-This work is published under [MIT][mit] License.
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
 [chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
