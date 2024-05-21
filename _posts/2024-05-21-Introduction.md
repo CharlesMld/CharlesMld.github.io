@@ -10,9 +10,10 @@ tags: [writing, myself] # TAG names should always be lowercase
 # toc: true # by default its on so don't have to do that, if want to change go to config
 # comments: true # by default its on so don't have to do that, if want to change go to config
 ---
+
 Test
 
--- https://chirpy.cotes.page/posts/write-a-new-post/
+https://chirpy.cotes.page/posts/write-a-new-post/
 
 Hey everyone, I'm Charles, a computer science student interested in data science.
 
