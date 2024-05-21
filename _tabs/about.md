@@ -44,7 +44,7 @@ My life goals are centered around personal growth, professional development, and
 
 ---
 
-Thank you for taking the time to learn more about me. Feel free to explore the rest of my website to see my projects, blog posts, and more. If you'd like to get in touch, please visit the [Contact](#contact) section.
+Thank you for taking the time to learn more about me. Feel free to explore the rest of my website to see my projects, blog posts, and more. If you'd like to get in touch, please visit the contact section.
 
 ---
 
