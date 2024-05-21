@@ -16,7 +16,7 @@ timezone: Europe/Paris
 
 title: Charles Milliaud's Blog # the main title
 
-tagline: A blog dedicated to documenting my life as a SE student # it will display as the sub-title
+tagline: A blog to document my life as a SE student # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   In this blog I'll talk about my work, my hobbies and my life as a SE student.
