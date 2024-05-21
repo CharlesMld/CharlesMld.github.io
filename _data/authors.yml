@@ -1,9 +1,10 @@
 <charles_mld>:
   name: <Charles Milliaud>
   twitter: <CMilliaud>
-  url: <> # author URL (internal)
+  # Possible to link to an existing internal link 
+  # url: <>
 
-<your_name>:
-  name: <Your Name>
-  twitter: <Your Twitter>
-  url: <Your URL>
+# <your_name>:
+#   name: <Your Name>
+#   twitter: <Your Twitter>
+#   url: <Your URL>
