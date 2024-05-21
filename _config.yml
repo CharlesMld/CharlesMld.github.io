@@ -14,9 +14,9 @@ timezone: Europe/Paris
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Charles Milliaud's Blog # the main title
+title: My Blog # the main title
 
-tagline: A blog to document my life as a SE student # it will display as the sub-title
+tagline: A blog to document my life as a software engineer student # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   In this blog I'll talk about my work, my hobbies and my life as a SE student.
