@@ -108,7 +108,23 @@ Repeat the previous steps again and again until the clusters are stabilized and 
 *Mean shift* : non-parametric clustering algorithm that works by finding modes (dense regions) in the data distribution. It is a gradient ascent algorithm that iteratively moves data points towards regions of higher density.
 
 ## Feature detection
+A feature is a "meaningful" part of an image. Features are defined by their *keypoint* and their *descriptor* (vector representation of the surrounding area (color, texture, orientation)). 
 
+During the couse we've studied multiple feature detectors such the **Harris corner detector** which allow us to build a real and symmetric *auto-correlation* matrix from the image which means its eigenvectors are orthogonals and point to the direction of max data spread (thus the corners). With eigenvalues, we get information about the type of patch : 
+- If both eigenvalues are small: uniform region 
+- Only one large eigenvalue: edge 
+- Two large eigenvalues: corner
+
+We also approached the **USAN/SUSAN corner detector**, the **SIFT feature detector** and many other feature detectors.
+
+## The pinhole camera model & Projective geometry
+The **pinhole camera model** provides a mathematical framework for understanding how a camera captures images. It establishes a coordinate system to represent the geometric relationship between the camera and the scene.
+![Real camera](../assets/real_camera.png){: width="400"}
+
+Using **projective geometry**, we simplify the pinhole camera model and derive mathematical equations that describe the relationship between the 3D world and its 2D projection on the image plane:
+![Camera equations](../assets/camera_equations.png){: width="300"}
+
+This is the easy part. Now that we have the object real coordinates we have to convert them into pixel coordinates. 
 
 # Course outline (as given by teacher)
 **Low-level image processing** : Single pixel and histogram-based transform • Linear filters • Non-linear filters
