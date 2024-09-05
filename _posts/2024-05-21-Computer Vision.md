@@ -9,6 +9,7 @@ tags: [computer_vision] # TAG names should always be lowercase
 # description: This post is a short introduction of myself and what I do in life
 # toc: true # by default its on so don't have to do that, if want to change go to config
 # comments: true # by default its on so don't have to do that, if want to change go to config
+math: true
 ---
 
 I recently completed a Computer Vision course as part of my Master's program in Information Engineering at the University of Padova. The course, taught by Professor Stefano Ghidoni, was a key component of my Erasmus semester. This review summarizes the main concepts and topics covered during the class, which I successfully passed at the conclusion of my exchange program. You'll be able to find the course's outline in the end of this post.
@@ -37,9 +38,10 @@ There are different ways of transforming an image :
 - Local operations (The output value depends on the initial values of the pixel + its neighbors)
 - Geometric transforms
 
-Several single pixel operation filters exist such as negative (switches dark and light on original image), log filter (highlights difference between pixels (contrast)), gamma (similar to log but tunable with gamma parameter), contrast streching and thresholding (compares each pixel value to the threshold, if lower then we assign the predefined low value ($L$) else, we assign the predefined high value ($H$)).
+Several single pixel operation filters exist such as negative (switches dark and light on original image), log filter (highlights difference between pixels (contrast)), gamma (similar to log but tunable with gamma parameter), contrast streching and thresholding (compares each pixel value to the threshold, if lower then we assign the predefined low value ($$L$$) else, we assign the predefined high value ($$H$$)).
 
-We can also use the histogram of a grey image and equalize it in order to make the objects stand out. **Histogram Equalization** is a technique used in image processing to enhance the contrast of an image. It works by redistributing the intensity values in the image by using a special function so that the histogram becomes flat. As you can observe here: ![Histogram equalization](../assets/histogram.png){: width="600"}
+We can also use the histogram of a grey image and equalize it in order to make the objects stand out. **Histogram Equalization** is a technique used in image processing to enhance the contrast of an image. It works by redistributing the intensity values in the image by using a special function so that the histogram becomes flat. As you can observe here: 
+![Histogram equalization](../assets/histogram.png){: width="500"}
 
 **Local operations** are defined based on a filter/kernel around the pixel. A filter can change image brightness but it is unchanged if the weights of the filter sum up to 1. We studied *linear/smoothing filters* (averaging, 1st order derivative and 2nd order derivative filters) one of the most intersting one was the Sobel filter which will talk about later. But also non-linear filters (min, max, median) which advantage is that they can suppress components such as noise (Gaussian, Rayleigh, Gamma, Exponential, Uniform or even Salt & Pepper noise) for image restoration.
 
@@ -47,8 +49,8 @@ We can also use the histogram of a grey image and equalize it in order to make t
 Mid-level image processing is based on more complex models (edge, line, blob detection, salient features, keypoints, texture).
 
 **The Sobel edge detector** is an *isotropic* detector (directionally independent) which derives from the gradient operation applied to discrete values:
-- $g_x=f(x+1,y)-f(x,y)$
-- $g_y=f(x,y+1)-f(x,y)$
+- $$g_x=f(x+1,y)-f(x,y)$$
+- $$g_y=f(x,y+1)-f(x,y)$$
 
 Which gives us the Sobel horizontal/vertical operators :
 $$
@@ -66,12 +68,14 @@ G_y=
 	1 & 2 & 1
 \end{pmatrix}
 $$
-Applying these operators to each pixel (and its surroundings) gives us a $G_x$ and $G_y$ value which we can then use to compute 2 important measures which are the gradient magnitude (how strong is the edge) $G=\sqrt{G_x^2+G_y^2}$ and the gradient phase (angle of the edge) $\theta=arctan(\frac{G_y}{G_x})$
+Applying these operators to each pixel (and its surroundings) gives us a $$G_x$$ and $$G_y$$ value which we can then use to compute 2 important measures which are the gradient magnitude (how strong is the edge) $$G=\sqrt{G_x^2+G_y^2}$$ and the gradient phase (angle of the edge) $$\theta=arctan(\frac{G_y}{G_x})$$
 
 However, Sobel is sensitive to noise so it's common to use Gaussian blur first and then Sobel edge detector.
 
 **The Canny edge detector** allows to specifically preserve edges that should be forgotten because they're very hardly detectable such as the one on the ball below. 
+
 ![Ball](../assets/ball.png){: .normal width="300"}
+
 It works by basically taking the output of the Sobel filter and then performing a 2 steps algorithm :
 - step 1 is thinning all edges to make them 1 pixel wide
 - step 2 is removing edges that are not strong enough (using hysteresis thresholding)
@@ -92,6 +96,7 @@ We then studied the **region growing** approach which group pixels of subregions
 
 Then we reviewed the **Watershed** algorithm which provide a solution to segment connected areas as below
 ![Watershed](../assets/watershed.png){: width="400"}
+
 The algorithm is inspired by the concept of a watershed in hydrology. It treats the image as a topographic surface, where pixel intensities represent elevations. The algorithm identifies catchment basins (regions) that are separated by watersheds (edges).
 
 Finally we saw 2 **clustering methods** which approach is to consider the segmentation problem as a clustering problem and then segment the clusters. To apply such algorithm we must first consider each pixel as a feature vector and then apply *K-means* or *mean shift* clustering to these vectors (considered as points). 
@@ -107,12 +112,21 @@ Repeat the previous steps again and again until the clusters are stabilized and 
 
 # Course outline (as given by teacher)
 **Low-level image processing** : Single pixel and histogram-based transform • Linear filters • Non-linear filters
+
 **Mid-level image processing** Edge detection, derivative • Corner detection • Blob detection • Hough transform • Segmentation
+
 **Image features** Keypoint detection and feature descriptor calculation • Feature matching
+
 **High-level vision** Object detection & recognition • Image (semantic) segmentation • Machine learning for computer vision
+
 **Image formation, cameras and colors** Imaging systems • Cameras: sensors, optics, camera working principle • Colorimetry: color spaces, color matching
+
 **Projective geometry** Geometric representation of the image formation process • Non-ideal cameras • Reference systems
+
 **Camera calibration** Study of lens distortion • Compensation of lens distortion • Zhang calibration method
+
 **Deep Learning for computer vision** Deep networks dedicated to image processing • End-to-end learning • Transfer learning & fine-tuning
+
 **C++** Templates: libraries and classes • Class hierarchies and inheritance • Data management & processing for computer vision
+
 **Computer vision system designs** Intro to OpenCV, image loading, pixel manipulation, color spaces • Camera Calibration • Image equalization, histograms and filters • Hough transform and edge detection • Keypoints, descriptors and matching: building a panoramic image • Keypoints, descriptors and matching: object detection • Machine learning / deep learning: object detection
