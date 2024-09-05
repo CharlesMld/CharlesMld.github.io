@@ -16,15 +16,14 @@ I recently completed a Computer Vision course as part of my Master's program in 
 # Global review
 The Computer Vision course offered a comprehensive overview of the field, living up to the professor's promise of covering the entire spectrum from basic object representation in cameras to advanced deep learning techniques using convolutional neural networks.
 
-Weekly two-hour lab sessions complemented the theoretical lectures, providing hands-on experience with the OpenCV library. We worked in C, utilizing CMAKE files to streamline the compilation process. These practical sessions were designed to prepare us for the final group project.
+Weekly two-hour lab sessions complemented the theoretical lectures, providing hands-on experience with the OpenCV library. We worked in C, using CMAKE files to streamline the compilation process. These practical sessions were designed to prepare us for the final group project.
 Our final project involved analyzing pool game videos from multiple angles and with varying table/background colors. The main objectives were to:
+- Segment the pool table and balls
+- Color-code elements (green for the table, blue for solid balls, red for striped balls)
+- Detect and track ball movements
+- Create a bird's-eye view map of the pool table
 
-Segment the pool table and balls
-Color-code elements (green for the table, blue for solid balls, red for striped balls)
-Detect and track ball movements
-Create a bird's-eye view map of the pool table
-
-While challenging, especially given my impending return to France, our group managed to pass the project. However, I feel I could have contributed more given different circumstances.
+While challenging, especially given my impending return to France, our group managed to pass the project. However, I feel I could have contributed more given different circumstances. We eventually managed to obtain a good 7.25 out of 10.
 The final exam was moderately challenging. Although I performed well, I believe there was room for improvement. The most valuable aspect of the course was the learning process itself. I developed a skill for distilling complex presentations into concise, well-explained concepts. YouTube proved to be an invaluable resource for understanding the mathematical principles underlying image transformations.
 I conclude this course with a set of clear, comprehensive notes that I'm confident will serve as a quick reference should I engage with computer vision in the future. The knowledge gained has provided a solid foundation in this field.
 
