@@ -124,7 +124,25 @@ The **pinhole camera model** provides a mathematical framework for understanding
 Using **projective geometry**, we simplify the pinhole camera model and derive mathematical equations that describe the relationship between the 3D world and its 2D projection on the image plane:
 ![Camera equations](../assets/camera_equations.png){: width="300"}
 
-This is the easy part. Now that we have the object real coordinates we have to convert them into pixel coordinates. 
+This is the easy part. Now that we have the object real coordinates we have to convert them into pixel coordinates. First, we convert Cartesian coordinates into homogeneous coordinates which means $$(x,y,z)$$ becomes $$(x,y,z,w)$$ where $w$ is a non-zero scalar. Then we use *perspective projection* (and a projection matrix) which is the process of projecting a 3D point onto a 2D plane (the image plane) from a specific viewpoint (the camera). And then we get $$(x,y)$$ as the object's coordinates. 
+
+We then need to map $(x,y)$ into its $(u,v)$ pixel values using some real to pixel coordinates conversion factors. We can shorten the process by putting all these equations into the same big one and thus changing a bit the projection matrix that we had.
+
+We also tackled *roto-translations* which is the combination of rotation and translation transformations applied to points in space. In projective geometry, these transformations are often represented using homogeneous coordinates and transformation matrices, which simplify the computations and make the mathematical operations more robust. This was a fun and easy to understand concept. 
+
+## Geometric transformations and Camera calibration
+Following the roto-translations, we reviewed all possible 2D geometric transformations and their corresponding matrices. 
+
+Then we tackled the camera model and how lenses worked. There are 2 exposure parameters: the *aperture* (diameter of lens opening therefore a fraction of f, also controls the depth of field) and the *shutter speed* (exposure time ie a fraction of second).
+
+Usually thin lenses are used the make the rays of an object converge on the sensor. There are non ideal lenses which may not be perfect and cause distortion (radial or tangential), chromatic aberrations and other effects.
+
+*Camera calibration* is the process of estimating the camera parameters (projection characteristics of a camera). We did practical work on that subject trying to calibrate a laptop's camera using opencv. That way I understood all aspects of a camera.
+
+## Object recognition & Deep learning
+Some object recongition techniques we saw are the Viola and Jones algorithm (for face detection) which we can actually use for objects. But also template matching (comparing portions of an image against a pre-defined template image), Histogram of Oriented Gradients (particularly effective in capturing the shape and structure of objects in images), Bag of Words (comes from document analysis, the principle is to decompose an image into parts and then look at what are the parts that appear the most and which other image have the same eatures).
+
+We explored machine and deep learning methods for tasks like recognizing and classifying objects. It was fascinating to discover how deep learning techniques originally developed for natural language processing could also be applied to computer vision. This suggests that deep learning might be a universal approach to data processing, uniting various scientific fields.
 
 # Course outline (as given by teacher)
 **Low-level image processing** : Single pixel and histogram-based transform • Linear filters • Non-linear filters
