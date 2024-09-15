@@ -26,7 +26,10 @@ The general components that are used are :
 These components should be adapted to whether we process documents or queries as you can see below.
 ![Search engine](../assets/search_engine.jpeg){: width="400"}
 
-The class was basically about reviewing all the techniques that exist for each component and trying to understand how they worked. We also had tutorships to practice on real datasets. Finally, we had to submit a project that was very important for the final grade.
+The class was basically about reviewing all the techniques that existed for each component and trying to understand how they worked. We also had tutorships to practice on real datasets. Finally, we had to submit a project that was very important for the final grade.
 
 ## The project
-[My homework](../assets/homework-1.pdf)
+The project was a participation to [CLEF 2024](https://clef2024.clef-initiative.eu/) LongEval-Retrieval Task. The CLEF is an independent peer-reviewed conference on a broad range of issues in the fields of multilingual and multimodal information access evaluation. We specifically participated in the LongEval-Retrieval task which goal is to :
+> Evaluate the temporal persistence of information retrieval (IR) systems and text classifiers. The task is motivated by recent research showing that the performance of these models drops as the test data becomes more distant in time from the training data. LongEval differs from traditional IR and classification shared task with special considerations on evaluating models that mitigate performance drop over time. We envisage that this task will bring more attention from the NLP community to the problem of temporal generalisability of models, what enables or prevents it, potential solutions and limitations.
+
+Feel free to check our contribution [here](https://drive.google.com/file/d/1jDEJr4x36HqPSy1AlHwytGidbZ9zmPs9/view?usp=drive_link). The project felt like a lot of work at the time but in the end I realized that I gained a lot of knowledge in the field of search engines in only 3-4 months of studies.
