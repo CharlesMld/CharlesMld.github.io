@@ -2,7 +2,7 @@
 title: My experience in Vietnam
 # The author information of the post usually does not need to be filled in the Front Matter , they will be obtained from variables social.name and the first entry of social.links of the configuration file by default. But you can also override it as follows : (find charles_mld in _data)
 # authors: [<author1_id>, <author2_id>] for multiple entries
-author: charles_mld
+# author: charles_mld
 date: 2023-09-15 11:54:10 +0800
 categories: [Travel, Study] # up to 2 elmts like category, sub-category
 image:
