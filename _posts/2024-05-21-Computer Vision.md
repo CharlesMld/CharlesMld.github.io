@@ -4,7 +4,7 @@ title: Computer Vision
 # authors: [<author1_id>, <author2_id>] for multiple entries
 author: <charles_mld>
 date: 2024-08-31 18:00:00 +0800
-categories: [Italy, University] # up to 2 elmts like category, sub-category
+categories: [Study] # up to 2 elmts like category, sub-category
 tags: [computer_vision] # TAG names should always be lowercase
 # description: This post is a short introduction of myself and what I do in life
 # toc: true # by default its on so don't have to do that, if want to change go to config
