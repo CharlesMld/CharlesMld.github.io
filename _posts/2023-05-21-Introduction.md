@@ -2,7 +2,7 @@
 title: Introduction
 # The author information of the post usually does not need to be filled in the Front Matter , they will be obtained from variables social.name and the first entry of social.links of the configuration file by default. But you can also override it as follows : (find charles_mld in _data)
 # authors: [<author1_id>, <author2_id>] for multiple entries
-author: <charles_mld>
+author: charles_mld
 date: 2023-05-21 11:54:10 +0800
 categories: [General] # up to 2 elmts like category, sub-category
 tags: [writing, myself] # TAG names should always be lowercase
